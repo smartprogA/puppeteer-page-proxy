@@ -1,4 +1,8 @@
 # Change log
+### [1.3.1] - 2024-02-01
+#### Fixes
+- Fixed bugs
+# Change log
 ### [1.3.0] - 2022-11-03
 #### Changes
 - Update readme

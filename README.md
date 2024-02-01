@@ -2,7 +2,7 @@
 ![node-current](https://img.shields.io/node/v/puppeteer?style=flat-square)
 ![npm](https://img.shields.io/npm/dt/puppeteer-page-proxy?style=flat-square)
 
-# puppeteer-page-proxy <img src="https://i.ibb.co/kQrN9QJ/puppeteer-page-proxy-logo.png" align="right" width="150" height="150">
+# smartprog-puppeteer-page-proxy <img src="https://i.ibb.co/kQrN9QJ/puppeteer-page-proxy-logo.png" align="right" width="150" height="150">
 Additional Node.js module to use with **[puppeteer](https://www.npmjs.com/package/puppeteer)** for setting proxies per page basis.
 
 Forwards intercepted requests from the browser to Node.js where it redoes the requests through a proxy and then returns the response to the browser.
@@ -16,35 +16,12 @@ Forwards intercepted requests from the browser to Node.js where it redoes the re
 
 ## Installation
 ```
-npm i puppeteer-page-proxy
-```
-## API
-#### useProxy(pageOrReq, proxy)
-
-- `pageOrReq` <[object](https://developer.mozilla.org/en-US/docs/Glossary/Object)> 'Page' or 'Request' object to set a proxy for.
-- `proxy` <[string](https://developer.mozilla.org/en-US/docs/Glossary/String)|[object](https://developer.mozilla.org/en-US/docs/Glossary/Object)> Proxy to use in the current page.
-  * Begins with a protocol (e.g. http://, https://, socks://)
-  * In the case of [proxy per request](https://github.com/Cuadrix/puppeteer-page-proxy#proxy-per-request), this can be an object with optional properties for overriding requests:\
-`url`, `method`, `postData`, `headers`\
-See [ContinueRequestOverrides](https://pptr.dev/api/puppeteer.continuerequestoverrides) for more info about the above properties.
-  
-#### useProxy.lookup(page[, lookupService, isJSON, timeout])
-
-- `page` <[object](https://developer.mozilla.org/en-US/docs/Glossary/Object)> 'Page' object to execute the request on.
-- `lookupService` <[string](https://developer.mozilla.org/en-US/docs/Glossary/String)> External lookup service to request data from.
-  * Fetches data from **api64.ipify.org** by default.
-- `isJSON` <[boolean](https://developer.mozilla.org/en-US/docs/Glossary/Boolean)> Whether to [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) the received response.
-  * Defaults to **true**.
-- `timeout` <[number](https://developer.mozilla.org/en-US/docs/Glossary/Number)|[string](https://developer.mozilla.org/en-US/docs/Glossary/String)> Time in milliseconds after which the request times out.
-  * Defaults to **30000**.
-- returns: <[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)> Promise which resolves to the response of the lookup request.
-
-**NOTE:** By default this method expects a response in [JSON](https://en.wikipedia.org/wiki/JSON#Example) format and [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)'s it to a usable javascript object. To disable this functionality, set `isJSON` to `false`.
-    
+npm i smartprog-puppeteer-page-proxy
+``` 
 ## Usage
 #### Importing:
 ```js
-const useProxy = require('puppeteer-page-proxy');
+const useProxy = require('smartprog-puppeteer-page-proxy');
 ```
 
 #### Proxy per page:
